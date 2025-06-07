@@ -1,8 +1,14 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 const Hero = () => {
+  const scrollToProjects = () => {
+    const projectsSection = document.querySelector('[data-section="projects"]');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative overflow-hidden bg-background min-h-screen flex items-center">
       <div className="absolute inset-0 bg-grid-pattern"></div>
@@ -34,7 +40,12 @@ const Hero = () => {
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 hover-scale border-muted-foreground/20 hover:bg-accent">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-lg px-8 py-6 hover-scale border-muted-foreground/20 hover:bg-accent"
+              onClick={scrollToProjects}
+            >
               View Our Work
             </Button>
           </div>
