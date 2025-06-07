@@ -4,11 +4,12 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-accent/5 min-h-screen flex items-center">
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+    <section className="relative overflow-hidden bg-background min-h-screen flex items-center">
+      <div className="absolute inset-0 bg-grid-pattern"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in">
+          <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 text-primary-foreground px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in backdrop-blur-sm">
             <Sparkles className="w-4 h-4" />
             Transforming businesses with cutting-edge technology
           </div>
@@ -29,11 +30,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-            <Button size="lg" className="group text-lg px-8 py-6 hover-scale">
+            <Button size="lg" className="group text-lg px-8 py-6 hover-scale bg-primary hover:bg-primary/90">
               Start Your Project
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 py-6 hover-scale">
+            <Button variant="outline" size="lg" className="text-lg px-8 py-6 hover-scale border-muted-foreground/20 hover:bg-accent">
               View Our Work
             </Button>
           </div>
